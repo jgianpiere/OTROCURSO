@@ -34,4 +34,20 @@
 	<script  src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
+<audio id="audio-bg" preload autoplay loop valumen="0.2">
+  <source src="demo/voz/AutumnDay.ogg" type="audio/ogg">
+  <source src="demo/voz/mp3/AutumnDay.mp3" type="audio/mpeg">
+  <source src="demo/voz/wav/AutumnDay.wav" type="audio/wav">
+  <source src="demo/voz/mpeg/AutumnDay.mpeg" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+<script type="text/javascript">
+	var audio = document.createElement("audio");
+	audio.src = "demo/voz/mp3/Nota-de-voz-011.mp3";
+	audio.addEventListener('ended', function () {
+	// Wait 500 milliseconds before next loop
+	setTimeout(function () { audio.play(); }, 18000);
+}, false);
+audio.play();
+</script>
 </html>
